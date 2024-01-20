@@ -1,0 +1,100 @@
+body {
+  // font-family: "Oswald", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.body-main {
+  transition: all .4s ease;
+}
+* {
+  user-select: none;
+}
+
+.main {
+  overflow: hidden;
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  // transition: all .3s;
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 300px 4fr 1fr;
+    gap: 10px 10px;
+    height: 100%;
+    // transition: all .3s;
+
+    &.active {
+      grid-template-columns: 300px 4fr 0fr;
+    }
+  }
+}
+
+.sidebar {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 1.3;
+  }
+}
+.error-img {
+  width: 100%;
+  height: 100vh;
+}
+
+.refresh_filter {
+  display: flex;
+  justify-content: space-between;
+  svg {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:active {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.empty_card {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 100px;
+  .sidebar__empty_img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+}
+.sidebar__item b {
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+
+
+.preloader{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  h1{
+    font-size: 38px;
+  }
+}

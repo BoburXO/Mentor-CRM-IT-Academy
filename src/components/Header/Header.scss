@@ -1,0 +1,33 @@
+.header {
+    border: 1px solid lightgray;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.04);
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a{
+        color: #000;
+    }
+}
+
+
+.burger {
+    width: 36px;
+    cursor: pointer;
+
+    transition: all .3s;
+
+    &.active {
+        transform: rotate(180deg);
+    }
+}
+
+.header__twise{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
